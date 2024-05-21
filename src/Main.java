@@ -19,8 +19,8 @@ public class Main {
         System.out.println(b2);
         char c1 = 'a';
         System.out.println(c1);
-        char c2 = 'a';
-        System.out.println(c2);
+        char c3 = 'a';
+        System.out.println(c3);
 
         ;
 
