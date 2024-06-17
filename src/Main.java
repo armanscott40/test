@@ -1,15 +1,15 @@
 
 public class Main {
     public static <string> void main(String[] args) {
-        int a = factorial(5);
+        int a = f(5);
         System.out.println( " نتبجه فاکتوریل " + a);
 
     }
-    public static int factorial(int n) {
+    public static int f(int n) {
         if (n <= 1) {
             return 1;
         } else {
-            return n * factorial(n - 1);
+            return n * f(n - 1);
         }
     }
 
