@@ -2,7 +2,7 @@
 public class Main {
     public static <string> void main(String[] args) {
         int a = f(5);
-        System.out.println( " نتبجه فاکتوریل " + a);
+        System.out.println( " نتبجه فاکتوریل: " + a);
 
     }
     public static int f(int n) {
