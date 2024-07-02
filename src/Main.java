@@ -1,16 +1,23 @@
 
 public class Main {
-    public static <string> void main(String[] args) {
-        int a = f(5);
-        System.out.println( " نتبجه فاکتوریل   : " + a);
+    public static void main(String[] args) {
+        int n = 5;
+        int calVar = ca(n);
+        if (calVar == 2) {
+            System.out.println( n+ " اول است ");
+        } else {
+            System.out.println( n+ " اول نیست ");
+        }
 
     }
-    public static int f(int n) {
-        if (n <= 1) {
-            return 1;
-        } else {
-            return n * f(n - 1);
+    private static int ca(int n) {
+        int counter = 0 ;
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                counter++;
+            }
         }
+        return counter;
     }
 
 }
