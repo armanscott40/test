@@ -30,7 +30,7 @@ class ShortTermDeposit extends Deposit {
         super(ownerName, balance);
     }
 
-    @Override
+
     public void withdraw(double amount) {
         if (balance - amount < 2000) {
             System.out.println("برداشت ناموفق: موجودی نباید از 2000 تومان کمتر شود.");
@@ -39,7 +39,6 @@ class ShortTermDeposit extends Deposit {
         }
     }
 
-    @Override
     public double calculateInterest() {
         double interest = this.balance * 0.1 / 12; // 10 درصد سالانه  
         System.out.println("سود سپرده کوتاه مدت " + ownerName + ": " + interest + " تومان");
@@ -53,17 +52,17 @@ class LongTermDeposit extends Deposit {
         super(ownerName, balance);
     }
 
-    @Override
+
     public void deposit(double amount) {
         System.out.println("برای سپرده بلند مدت اجازه واریز وجود ندارد.");
     }
 
-    @Override
+
     public void withdraw(double amount) {
         System.out.println("برای سپرده بلند مدت اجازه برداشت وجود ندارد.");
     }
 
-    @Override
+
     public double calculateInterest() {
         double interest = this.balance * 0.2 / 12; // 20 درصد سالانه  
         System.out.println("سود سپرده بلند مدت " + ownerName + ": " + interest + " تومان");
@@ -77,7 +76,7 @@ class SavingsDeposit extends Deposit {
         super(ownerName, balance);
     }
 
-    @Override
+
     public double calculateInterest() {
         double interest = 0; // نرخ سود سپرده پس انداز صفر است  
         System.out.println("نرخ سود سپرده پس انداز " + ownerName + ": " + interest + " تومان");
@@ -88,9 +87,9 @@ class SavingsDeposit extends Deposit {
 public class Main {
     public static void main(String[] args) {
         Deposit[] deposits = {
-                new ShortTermDeposit("علی", 3000),
-                new LongTermDeposit("حمید", 5000),
-                new SavingsDeposit("سارا", 1500)
+                new ShortTermDeposit("نیما", 3000),
+                new LongTermDeposit("آرمان", 5000),
+                new SavingsDeposit("مهدی", 1500)
         };
 
         // عملیات واریز و برداشت  
